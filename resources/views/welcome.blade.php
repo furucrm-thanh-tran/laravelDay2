@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <style>
         html,
         body {
@@ -85,9 +87,11 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Laravel
+                Welcome To Laravel Day 2
             </div>
-
+            @if(Auth::guest())
+            <a href="/login" class="btn btn-info m-5"> You need to login to see the list 😜😜 >>>></a>
+            @endif
             <div class="links">
                 <a href="https://laravel.com/docs">Docs</a>
                 <a href="https://laracasts.com">Laracasts</a>
